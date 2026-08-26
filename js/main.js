@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── 6. Macro Categories, Filter Tabs & Video Gallery Modal ──
   const macroCards = document.querySelectorAll('.macro-card');
-  const filterTabs = document.querySelectorAll('.filter-tab, .filter-btn');
+  const filterTabs = document.querySelectorAll('.filter-tab');
   const videoItems = Array.from(document.querySelectorAll('.video-item'));
 
   // Modal elements
@@ -300,7 +300,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Scroll to video gallery if triggered by macro card click
     if (shouldScroll) {
-      const target = document.getElementById('video-gallery') || document.querySelector('.gallery-filter-bar') || document.querySelector('.video-grid');
+      const target = document.getElementById('video-gallery');
       if (target) {
         if (lenis) {
           lenis.scrollTo(target, { offset: -90 });
@@ -340,7 +340,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    card.addEventListener('click', (e) => {
+    card.addEventListener('click', () => {
       const macro = card.dataset.macro;
       if (macro) {
         setCategoryFilter(macro, true);
