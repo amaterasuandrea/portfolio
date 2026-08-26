@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg4" cx="50%" cy="60%" r="80%">
+      <stop offset="0%" stop-color="#131e2b"/>
+      <stop offset="50%" stop-color="#080c12"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg4)"/>
+  
+  <text x="960" y="510" text-anchor="middle" font-family="'Space Grotesk', system-ui, sans-serif" font-weight="700" font-size="56" fill="#ffffff">STILL WATERS</text>
+  <text x="960" y="560" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="16" fill="#8B5CF6" letter-spacing="4">DOCUMENTARY / 2025</text>
+  <text x="960" y="600" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="14" fill="#666666">ACES COLOR &bull; 5.1 AUDIO</text>
+</svg>

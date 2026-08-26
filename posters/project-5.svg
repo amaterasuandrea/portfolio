@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg5" cx="60%" cy="40%" r="80%">
+      <stop offset="0%" stop-color="#3b123d"/>
+      <stop offset="50%" stop-color="#120614"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg5)"/>
+  
+  <text x="960" y="510" text-anchor="middle" font-family="'Space Grotesk', system-ui, sans-serif" font-weight="700" font-size="56" fill="#ffffff">NEON PULSE</text>
+  <text x="960" y="560" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="16" fill="#8B5CF6" letter-spacing="4">MUSIC VIDEO / 2025</text>
+  <text x="960" y="600" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="14" fill="#666666">CYBERPUNK &bull; VFX &bull; ROTODRIVE</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg2" cx="70%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#161224"/>
+      <stop offset="60%" stop-color="#08070d"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg2)"/>
+  
+  <line x1="200" y1="0" x2="200" y2="1080" stroke="#8B5CF6" stroke-opacity="0.1" stroke-dasharray="4 4"/>
+  <line x1="1720" y1="0" x2="1720" y2="1080" stroke="#8B5CF6" stroke-opacity="0.1" stroke-dasharray="4 4"/>
+
+  <text x="960" y="500" text-anchor="middle" font-family="'Space Grotesk', system-ui, sans-serif" font-weight="700" font-size="56" fill="#ffffff" letter-spacing="2">URBAN FRAGMENTS</text>
+  <text x="960" y="550" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="16" fill="#8B5CF6" letter-spacing="4">SHORT FILM / 2026</text>
+  <text x="960" y="590" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="14" fill="#666666">2.39:1 CINEMASCOPE &bull; DAVINCI COLOR</text>
+  <text x="960" y="980" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="14" fill="#666666">00:12:15:00</text>
+</svg>

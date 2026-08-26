@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andrea Graffeo — Videomaker & Video Editor</title>
+  <meta name="description" content="Visual storytelling through editing, motion and image. Portfolio di Andrea Graffeo, filmmaker, video editor e colorist.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Lenis CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.20/dist/lenis.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+
+  <!-- Floating Background Elements -->
+  <div class="bg-elements" aria-hidden="true">
+    <div class="bg-grid-line-v" style="left: 20%;"></div>
+    <div class="bg-grid-line-v" style="left: 50%;"></div>
+    <div class="bg-grid-line-v" style="left: 80%;"></div>
+    <div class="bg-grid-line-h" style="top: 30%;"></div>
+    <div class="bg-grid-line-h" style="top: 70%;"></div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="navbar">
+    <div class="navbar-inner">
+      <a href="#top" class="navbar-logo">A.G.</a>
+
+      <nav class="navbar-links">
+        <a href="#works">WORKS</a>
+        <a href="#process">PROCESS</a>
+        <a href="#about">ABOUT</a>
+        <a href="#showreel">SHOWREEL</a>
+        <a href="#contact">CONTACT</a>
+      </nav>
+
+      <button class="hamburger" aria-label="Apri menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" aria-hidden="true">
+    <button class="mobile-close" aria-label="Chiudi menu">
+      <span></span>
+      <span></span>
+    </button>
+    <a href="#works">WORKS</a>
+    <a href="#process">PROCESS</a>
+    <a href="#about">ABOUT</a>
+    <a href="#showreel">SHOWREEL</a>
+    <a href="#contact">CONTACT</a>
+  </div>
+
+  <main>
+    <!-- 1. HERO SECTION -->
+    <section class="hero">
+      <div class="hero-video">
+        <video src="video/vfx/video1.mp4" autoplay muted loop playsinline preload="auto"></video>
+      </div>
+      <div class="hero-overlay"></div>
+
+      <!-- Technical HUD Elements -->
+      <div class="hud hud-tl">00:00:00:00</div>
+      <div class="hud hud-tr">
+        <span class="rec-dot"></span>
+        <span>REC</span>
+      </div>
+      <div class="hud hud-bl">
+        <span>FRAME 001</span>
+        <span>&#9654; PLAY</span>
+      </div>
+      <div class="hud hud-br">TIMELINE &mdash; 01</div>
+
+      <!-- Centered Hero Text -->
+      <div class="hero-content">
+        <h1 class="hero-name">ANDREA GRAFFEO</h1>
+        <p class="hero-role">VIDEOMAKER / VIDEO EDITOR</p>
+        <p class="hero-tagline">Visual storytelling through editing, motion and light.</p>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- 2. DAVINCI RESOLVE TIMELINE -->
+    <div class="resolve-timeline-section">
+      <!-- Resolve Toolbar -->
+      <div class="resolve-toolbar">
+        <div class="resolve-toolbar-left">
+          <span class="resolve-seq-title">TIMELINE 01</span>
+          <span class="resolve-seq-format">1080p &bull; 24.00 fps &bull; SDR Rec.709</span>
+          <div class="resolve-tools">
+            <button class="resolve-tool-btn active" title="Selection Mode (A)">&#10148;</button>
+            <button class="resolve-tool-btn" title="Blade Edit Mode (B)">&#9986;</button>
+            <button class="resolve-tool-btn" title="Trim Edit Mode (T)">&#10555;</button>
+            <button class="resolve-tool-btn" title="Snapping (N)">&#129522;</button>
+            <button class="resolve-tool-btn" title="Add Marker (M)">&#9670;</button>
+          </div>
+        </div>
+        <div class="resolve-toolbar-right">
+          <div class="resolve-tc-display">
+            <span class="text-label" style="font-size: 9px;">TIMECODE</span>
+            <div class="resolve-tc-box master-tc">01:00:00:00</div>
+          </div>
+          <div class="resolve-tc-display">
+            <span class="text-label" style="font-size: 9px;">DURATION</span>
+            <div class="resolve-tc-box duration">00:03:42:00</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Time Ruler with Ticks -->
+      <div class="resolve-ruler-container">
+        <div class="resolve-ruler-spacer">TRACKS</div>
+        <div class="resolve-ruler">
+          <div class="resolve-ruler-ticks"></div>
+          <div class="resolve-ruler-marks">
+            <span>01:00:00:00</span>
+            <span>01:00:05:00</span>
+            <span>01:00:10:00</span>
+            <span>01:00:15:00</span>
+            <span>01:00:20:00</span>
+            <span>01:00:25:00</span>
+            <span>01:00:30:00</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Timeline Body -->
+      <div class="resolve-body">
+        <!-- Track Headers Column -->
+        <div class="resolve-headers">
+          <!-- V2 Header -->
+          <div class="resolve-track-header">
+            <div class="resolve-th-title">
+              <span class="resolve-th-badge badge-video">V2</span>
+              <span>OVERLAY</span>
+            </div>
+            <div class="resolve-th-controls">
+              <span class="resolve-th-btn active">&#9679;</span>
+              <span class="resolve-th-btn">&#128274;</span>
+            </div>
+          </div>
+
+          <!-- V1 Header -->
+          <div class="resolve-track-header">
+            <div class="resolve-th-title">
+              <span class="resolve-th-badge badge-video">V1</span>
+              <span>MAIN</span>
+            </div>
+            <div class="resolve-th-controls">
+              <span class="resolve-th-btn active">&#9679;</span>
+              <span class="resolve-th-btn">&#128274;</span>
+            </div>
+          </div>
+
+          <!-- A1 Header -->
+          <div class="resolve-track-header">
+            <div class="resolve-th-title">
+              <span class="resolve-th-badge badge-audio">A1</span>
+              <span>SFX / VO</span>
+            </div>
+            <div class="resolve-th-controls">
+              <span class="resolve-th-btn">M</span>
+              <span class="resolve-th-btn active">S</span>
+            </div>
+          </div>
+
+          <!-- A2 Header -->
+          <div class="resolve-track-header">
+            <div class="resolve-th-title">
+              <span class="resolve-th-badge badge-audio">A2</span>
+              <span>MUSIC</span>
+            </div>
+            <div class="resolve-th-controls">
+              <span class="resolve-th-btn">M</span>
+              <span class="resolve-th-btn active">S</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Track Lanes Area with Clips -->
+        <div class="resolve-tracks">
+          <!-- DaVinci Playhead -->
+          <div class="resolve-playhead">
+            <div class="resolve-playhead-badge">01:00:00:00</div>
+            <div class="resolve-playhead-head"></div>
+          </div>
+
+          <!-- Track V2 Lane -->
+          <div class="resolve-track-lane">
+            <!-- V2 Clip 1: VFX EXR -->
+            <div class="r-clip clip-purple" style="left: 12%; width: 22%;">
+              <div class="r-clip-header">
+                <span>VFX_COMP_01.EXR</span>
+                <span>[Fusion]</span>
+              </div>
+              <div class="r-clip-body">
+                <span class="r-marker marker-violet" style="left: 30%;"></span>
+              </div>
+            </div>
+
+            <!-- V2 Clip 2: Graphic Title -->
+            <div class="r-clip clip-teal" style="left: 58%; width: 26%;">
+              <div class="r-clip-header">
+                <span>TITLE_KINETIC.MOV</span>
+                <span>[ProRes]</span>
+              </div>
+              <div class="r-clip-body">
+                <span class="r-marker marker-cyan" style="left: 60%;"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Track V1 Lane -->
+          <div class="resolve-track-lane">
+            <!-- V1 Clip 1: A-Cam Raw -->
+            <div class="r-clip clip-navy" style="left: 0%; width: 24%;">
+              <div class="r-clip-header">
+                <span>A001_C004_RAW.BRAW</span>
+                <span>[ACES]</span>
+              </div>
+              <div class="r-clip-body">
+                <span class="r-marker marker-cyan" style="left: 50%;"></span>
+              </div>
+            </div>
+
+            <!-- Transition -->
+            <div class="r-transition" style="left: calc(24% - 12px);"></div>
+
+            <!-- V1 Clip 2: B-Roll Neon -->
+            <div class="r-clip clip-amber" style="left: 24%; width: 28%;">
+              <div class="r-clip-header">
+                <span>B_ROLL_NEON_04.MOV</span>
+                <span>[LogC]</span>
+              </div>
+              <div class="r-clip-body">
+                <span class="r-marker marker-amber" style="left: 70%;"></span>
+              </div>
+            </div>
+
+            <!-- V1 Clip 3: Drone 4K -->
+            <div class="r-clip clip-olive" style="left: 52%; width: 22%;">
+              <div class="r-clip-header">
+                <span>DRONE_SUNSET_4K.MOV</span>
+                <span>[D-Log]</span>
+              </div>
+              <div class="r-clip-body"></div>
+            </div>
+
+            <!-- V1 Clip 4: Close Up Master -->
+            <div class="r-clip clip-navy" style="left: 74%; width: 26%;">
+              <div class="r-clip-header">
+                <span>A002_C012_HERO.BRAW</span>
+                <span>[ACES]</span>
+              </div>
+              <div class="r-clip-body"></div>
+            </div>
+          </div>
+
+          <!-- Track A1 Lane (SFX & Foley) -->
+          <div class="resolve-track-lane">
+            <div class="r-clip clip-audio" style="left: 4%; width: 34%;">
+              <div class="r-clip-header">
+                <span>VOICE_SYNC_MASTER.WAV</span>
+                <span>48kHz</span>
+              </div>
+              <div class="r-clip-body">
+                <svg class="r-audio-wave" viewBox="0 0 100 20" preserveAspectRatio="none">
+                  <path d="M0,10 L3,14 L6,6 L9,16 L12,4 L15,15 L18,7 L21,17 L24,5 L27,15 L30,8 L33,14 L36,6 L39,16 L42,5 L45,15 L48,7 L51,13 L54,8 L57,15 L60,6 L63,14 L66,7 L69,13 L72,8 L75,15 L78,6 L81,14 L84,7 L87,13 L90,8 L93,12 L96,9 L100,10" fill="none" stroke="#2dd4bf" stroke-width="0.8" vector-effect="non-scaling-stroke"></path>
+                </svg>
+              </div>
+            </div>
+
+            <div class="r-clip clip-audio" style="left: 48%; width: 38%;">
+              <div class="r-clip-header">
+                <span>SFX_RISER_IMPACT.WAV</span>
+                <span>48kHz</span>
+              </div>
+              <div class="r-clip-body">
+                <svg class="r-audio-wave" viewBox="0 0 100 20" preserveAspectRatio="none">
+                  <path d="M0,10 L4,12 L8,8 L12,13 L16,7 L20,15 L24,5 L28,16 L32,4 L36,17 L40,3 L44,18 L48,2 L52,19 L56,1 L60,18 L64,3 L68,17 L72,4 L76,16 L80,5 L84,14 L88,6 L92,13 L96,8 L100,10" fill="none" stroke="#2dd4bf" stroke-width="0.8" vector-effect="non-scaling-stroke"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Track A2 Lane (Music Bed) -->
+          <div class="resolve-track-lane">
+            <div class="r-clip clip-music" style="left: 0%; width: 100%;">
+              <div class="r-clip-header">
+                <span>ORIGINAL_SCORE_STEREO.WAV</span>
+                <span>[Mix 0.0dB]</span>
+              </div>
+              <div class="r-clip-body">
+                <svg class="r-audio-wave" viewBox="0 0 200 20" preserveAspectRatio="none">
+                  <path d="M0,10 L4,13 L8,7 L12,14 L16,6 L20,15 L24,5 L28,16 L32,4 L36,15 L40,6 L44,14 L48,7 L52,16 L56,4 L60,15 L64,5 L68,16 L72,4 L76,15 L80,6 L84,14 L88,7 L92,16 L96,4 L100,15 L104,5 L108,16 L112,4 L116,15 L120,5 L124,16 L128,4 L132,15 L136,6 L140,14 L144,7 L148,16 L152,4 L156,15 L160,5 L164,16 L168,4 L172,15 L176,5 L180,14 L184,6 L188,15 L192,5 L196,13 L200,10" fill="none" stroke="#64748b" stroke-width="0.7" vector-effect="non-scaling-stroke"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. SELECTED WORKS & MACRO CATEGORIES SECTION -->
+    <section id="works" class="projects-section">
+      <div class="container">
+        <!-- Section Header -->
+        <header class="section-header">
+          <div class="section-header-row">
+            <div>
+              <span class="section-badge-tag">PORTFOLIO &amp; SHOWCASE</span>
+              <h2 class="text-display text-section" style="margin-top: 0.5rem;">Macro Categorie</h2>
+            </div>
+            <span class="section-count">(05 MACRO &bull; 19 OPERE)</span>
+          </div>
+          <p class="section-intro">
+            Seleziona una delle cinque macro aree per visualizzare i progetti dedicati, oppure esplora l&apos;intera galleria interattiva.
+          </p>
+          <div class="section-line"></div>
+        </header>
+
+        <!-- 5 MACRO CATEGORY CARDS -->
+        <div class="macro-cards-grid">
+          <!-- Macro 1: VFX -->
+          <div class="macro-card" data-macro="vfx">
+            <div class="macro-card-bg">
+              <video src="video/vfx/spiderman.mp4" muted loop playsinline preload="metadata"></video>
+              <div class="macro-card-overlay"></div>
+            </div>
+            <div class="macro-card-content">
+              <div class="macro-card-top">
+                <span class="macro-badge">MACRO 01</span>
+                <span class="macro-count">05 VIDEO</span>
+              </div>
+              <div class="macro-card-bottom">
+                <h3 class="macro-title">VFX &amp; Compositing</h3>
+                <p class="macro-desc">Effetti visivi avanzati, simulazioni 3D, CGI environment e motion tracking.</p>
+                <div class="macro-cta">
+                  <span>Esplora Categoria</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Macro 2: IDEE ORIGINALI -->
+          <div class="macro-card" data-macro="idee-originali">
+            <div class="macro-card-bg">
+              <video src="video/idee%20originali/dream1.mov" muted loop playsinline preload="metadata"></video>
+              <div class="macro-card-overlay"></div>
+            </div>
+            <div class="macro-card-content">
+              <div class="macro-card-top">
+                <span class="macro-badge">MACRO 02</span>
+                <span class="macro-count">02 VIDEO</span>
+              </div>
+              <div class="macro-card-bottom">
+                <h3 class="macro-title">Idee Originali</h3>
+                <p class="macro-desc">Concept creativi, storytelling visivo, regie sperimentali ed espressione artistica.</p>
+                <div class="macro-cta">
+                  <span>Esplora Categoria</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Macro 3: VIDEO DINAMICI PER ATTIVITÀ -->
+          <div class="macro-card" data-macro="video-dinamici">
+            <div class="macro-card-bg">
+              <video src="video/video%20dinamici%20per%20attivit%C3%A0/Tennis%20day%201.mov" muted loop playsinline preload="metadata"></video>
+              <div class="macro-card-overlay"></div>
+            </div>
+            <div class="macro-card-content">
+              <div class="macro-card-top">
+                <span class="macro-badge">MACRO 03</span>
+                <span class="macro-count">02 VIDEO</span>
+              </div>
+              <div class="macro-card-bottom">
+                <h3 class="macro-title">Video Dinamici per Attività</h3>
+                <p class="macro-desc">Spot promozionali, contenuti commerciali ad alto impatto e reel d&apos;azione per brand e attività.</p>
+                <div class="macro-cta">
+                  <span>Esplora Categoria</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Macro 4: TESTI & KINETIC TYPOGRAPHY -->
+          <div class="macro-card" data-macro="testi">
+            <div class="macro-card-bg">
+              <img src="video/testi/text13d.gif" alt="Testi &amp; Kinetic Typography" loading="lazy">
+              <div class="macro-card-overlay"></div>
+            </div>
+            <div class="macro-card-content">
+              <div class="macro-card-top">
+                <span class="macro-badge">MACRO 04</span>
+                <span class="macro-count">02 VIDEO</span>
+              </div>
+              <div class="macro-card-bottom">
+                <h3 class="macro-title">Testi &amp; Kinetic Typography</h3>
+                <p class="macro-desc">Animazioni tipografiche 3D, kinetic typography, title design e motion lettering dinamico.</p>
+                <div class="macro-cta">
+                  <span>Esplora Categoria</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Macro 5: FOTOGRAFIE -->
+          <div class="macro-card" data-macro="fotografie">
+            <div class="macro-card-bg">
+              <img src="video/fotografie/esplosione.jpeg" alt="Fotografie" loading="lazy">
+              <div class="macro-card-overlay"></div>
+            </div>
+            <div class="macro-card-content">
+              <div class="macro-card-top">
+                <span class="macro-badge">MACRO 05</span>
+                <span class="macro-count">08 FOTO</span>
+              </div>
+              <div class="macro-card-bottom">
+                <h3 class="macro-title">Fotografie</h3>
+                <p class="macro-desc">Scatti artistici, fotografia naturalistica, macro e composizioni visive ad altissima definizione.</p>
+                <div class="macro-cta">
+                  <span>Esplora Categoria</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CATEGORY FILTER TABS -->
+        <div class="filter-wrapper" id="video-gallery">
+          <div class="filter-tabs">
+            <button class="filter-tab active" data-filter="all">
+              <span class="filter-name">TUTTI</span>
+              <span class="filter-num">19</span>
+            </button>
+            <button class="filter-tab" data-filter="vfx">
+              <span class="filter-name">VFX &amp; COMPOSITING</span>
+              <span class="filter-num">05</span>
+            </button>
+            <button class="filter-tab" data-filter="idee-originali">
+              <span class="filter-name">IDEE ORIGINALI</span>
+              <span class="filter-num">02</span>
+            </button>
+            <button class="filter-tab" data-filter="video-dinamici">
+              <span class="filter-name">VIDEO DINAMICI PER ATTIVITÀ</span>
+              <span class="filter-num">02</span>
+            </button>
+            <button class="filter-tab" data-filter="testi">
+              <span class="filter-name">TESTI &amp; KINETIC TYPE</span>
+              <span class="filter-num">02</span>
+            </button>
+            <button class="filter-tab" data-filter="fotografie">
+              <span class="filter-name">FOTOGRAFIE</span>
+              <span class="filter-num">08</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- VIDEO GALLERY GRID -->
+        <div class="video-grid">
+          <!-- VFX 01 (Landscape 16:9) -->
+          <article class="video-item card-landscape" data-category="vfx" data-title="Spider-Man — VFX &amp; CGI Integration" data-category-name="VFX &amp; COMPOSITING" data-src="video/vfx/spiderman.mp4" data-duration="00:00:09:14" data-format="4K UHD &bull; 60FPS" data-role="VFX Artist / Compositor">
+            <div class="video-item-inner">
+              <div class="video-card-media">
+                <video src="video/vfx/spiderman.mp4#t=0.1" muted loop playsinline preload="metadata"></video>
+                <div class="video-card-overlay">
+                  <div class="play-trigger-circle">
+                    <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="card-hud-top">
+                  <span class="badge-cat badge-vfx">VFX</span>
+                  <span class="badge-aspect">16:9 &bull; 4K</span>
+                </div>
+                <div class="card-hud-bottom">
+                  <span class="hud-tc">00:00:09:14</span>
+                  <span class="hud-action">&#9654; GUARDA</span>
+                </div>
+              </div>
+              <div class="video-card-info">
+                <div class="video-card-meta">
+                  <span class="video-index">01</span>
+                  <div>
+                    <h3 class="video-item-title">Spider-Man — VFX &amp; CGI Integration</h3>
+                    <p class="video-item-sub">VFX / CGI INTEGRATION</p>
+                  </div>
+                </div>
+                <span class="video-item-role">VFX Artist / Compositor</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- VFX 02 (Landscape 16:9) -->
+          <article class="video-item card-landscape" data-category="vfx" data-title="VFX Composite &amp; 3D Environment" data-category-name="VFX &amp; COMPOSITING" data-src="video/vfx/video1.mp4" data-duration="00:00:33:10" data-format="1440p QHD &bull; 60FPS" data-role="VFX Artist / Compositor">
+            <div class="video-item-inner">
+              <div class="video-card-media">
+                <video src="video/vfx/video1.mp4#t=0.1" muted loop playsinline preload="metadata"></video>
+                <div class="video-card-overlay">
+                  <div class="play-trigger-circle">
+                    <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="card-hud-top">
+                  <span class="badge-cat badge-vfx">VFX</span>
+                  <span class="badge-aspect">16:9 &bull; 1440p</span>
+                </div>
+                <div class="card-hud-bottom">
+                  <span class="hud-tc">00:00:33:10</span>
+                  <span class="hud-action">&#9654; GUARDA</span>
+                </div>
+              </div>
+              <div class="video-card-info">
+                <div class="video-card-meta">
+                  <span class="video-index">02</span>
+                  <div>
+                    <h3 class="video-item-title">VFX Composite &amp; 3D Environment</h3>
+                    <p class="video-item-sub">VFX / COMPOSITING</p>
+                  </div>
+                </div>
+                <span class="video-item-role">VFX Artist / Compositor</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- VFX 03 (Vertical 9:16) -->
+          <article class="video-item card-portrait" data-category="vfx" data-title="CGI Particle &amp; Light FX" data-category-name="VFX &amp; COMPOSITING" data-src="video/vfx/video2.mp4" data-duration="00:00:06:04" data-format="4K UHD &bull; 9:16 VERTICAL" data-role="3D Simulation / VFX">
+            <div class="video-item-inner">
+              <div class="video-card-media">
+                <video src="video/vfx/video2.mp4#t=0.1" muted loop playsinline preload="metadata"></video>
+                <div class="video-card-overlay">
+                  <div class="play-trigger-circle">
+                    <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="card-hud-top">
+                  <span class="badge-cat badge-vfx">VFX</span>
+                  <span class="badge-aspect">9:16 &bull; 4K</span>
+                </div>
+                <div class="card-hud-bottom">
+                  <span class="hud-tc">00:00:06:04</span>
+                  <span class="hud-action">&#9654; GUARDA</span>
+                </div>
+              </div>
+              <div class="video-card-info">
+                <div class="video-card-meta">
+                  <span class="video-index">03</span>
+                  <div>
+                    <h3 class="video-item-title">CGI Particle &amp; Light FX</h3>
+                    <p class="video-item-sub">VFX / 3D PARTICLES</p>
+                  </div>
+                </div>
+                <span class="video-item-role">3D Simulation / VFX</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- VFX 04 (Landscape 16:9) -->
+          <article class="video-item card-landscape" data-category="vfx" data-title="Cinematic Sci-Fi Environment" data-category-name="VFX &amp; COMPOSITING" data-src="video/vfx/video 3.mov" data-duration="00:00:30:03" data-format="4K UHD &bull; 24FPS" data-role="Colorist / VFX Editor">
+            <div class="video-item-inner">
+              <div class="video-card-media">
+                <video src="video/vfx/video%203.mov#t=0.1" muted loop playsinline preload="metadata"></video>
+                <div class="video-card-overlay">
+                  <div class="play-trigger-circle">
+                    <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="card-hud-top">
+                  <span class="badge-cat badge-vfx">VFX</span>
+                  <span class="badge-aspect">16:9 &bull; 4K</span>
+                </div>
+                <div class="card-hud-bottom">
+                  <span class="hud-tc">00:00:30:03</span>
+                  <span class="hud-action">&#9654; GUARDA</span>
+                </div>
+              </div>
+              <div class="video-card-info">
+                <div class="video-card-meta">
+                  <span class="video-index">04</span>
+                  <div>
+                    <h3 class="video-item-title">Cinematic Sci-Fi Environment</h3>
+                    <p class="video-item-sub">VFX / CGI WORLDS</p>
+                  </div>
+                </div>
+                <span class="video-item-role">Colorist / VFX Editor</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- VFX 05 (Vertical 9:16) -->
+          <article class="video-item card-portrait" data-category="vfx" data-title="Holographic &amp; Motion Tracking" data-category-name="VFX &amp; COMPOSITING" data-src="video/vfx/video 4.mov" data-duration="00:00:10:09" data-format="4K UHD &bull; 9:16 VERTICAL" data-role="Motion Tracking / VFX">
+            <div class="video-item-inner">
+              <div class="video-card-media">
+                <video src="video/vfx/video%204.mov#t=0.1" muted loop playsinline preload="metadata"></video>
+                <div class="video-card-overlay">
+                  <div class="play-trigger-circle">
+                    <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="card-hud-top">
+                  <span class="badge-cat badge-vfx">VFX</span>
+                  <span class="badge-aspect">9:16 &bull; 4K</span>
+                </div>
+                <div class="card-hud-bottom">
+                  <span class="hud-tc">00:00:10:09</span>
+                  <span class="hud-action">&#9654; GUARDA</span>
+                </div>
+              </div>
+              <div class="video-card-info">
+                <div class="video-card-meta">
+                  <span class="video-index">05</span>
+                  <div>
+                    <h3 class="video-item-title">Holographic &amp; Motion Tracking</h3>
+                    <p class="video-item-sub">VFX / TRACKING</p>
+                  </div>
+                </div>
+                <span class="video-item-role">Motion Tracking / VFX</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- IDEE ORIGINALI 01 (Vertical 9:16) -->
+          <article class="video-item card-portrait" data-category="idee-originali" data-title="Dream State: Original Concept" data-category-name="IDEE ORIGINALI" data-src="video/idee originali/dream1.mov" data-duration="00:00:44:12" data-format="4K UHD &bull; 9:16 VERTICAL" data-role="Director / Concept / Editor">
+            <div class="video-item-inner">
+              <div class="video-card-media">
+                <video src="video/idee%20originali/dream1.mov#t=0.1" muted loop playsinline preload="metadata"></video>
+                <div class="video-card-overlay">
+                  <div class="play-trigger-circle">
+                    <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="card-hud-top">
+                  <span class="badge-cat badge-original">IDEE ORIGINALI</span>
+                  <span class="badge-aspect">9:16 &bull; 4K</span>
+                </div>
+                <div class="card-hud-bottom">
+                  <span class="hud-tc">00:00:44:12</span>
+                  <span class="hud-action">&#9654; GUARDA</span>
+                </div>
+              </div>
+              <div class="video-card-info">
+                <div class="video-card-meta">
+                  <span class="video-index">06</span>
+                  <div>
+                    <h3 class="video-item-title">Dream State: Original Concept</h3>
+                    <p class="video-item-sub">CREATIVE DIRECTION / CONCEPT</p>
+                  </div>
+                </div>
+                <span class="video-item-role">Director / Concept / Editor</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- IDEE ORIGINALI 02 (Vertical 9:16) -->
+          <article class="video-item card-portrait" data-category="idee-originali" data-title="Visual Experiment No. 02" data-category-name="IDEE ORIGINALI" data-src="video/idee originali/prova2.mov" data-duration="00:00:24:17" data-format="HD &bull; 9:16 VERTICAL" data-role="Creative Direction / Edit">
+            <div class="video-item-inner">
+              <div class="video-card-media">
+                <video src="video/idee%20originali/prova2.mov#t=0.1" muted loop playsinline preload="metadata"></video>
+                <div class="video-card-overlay">
+                  <div class="play-trigger-circle">
+                    <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="card-hud-top">
+                  <span class="badge-cat badge-original">IDEE ORIGINALI</span>
+                  <span class="badge-aspect">9:16 &bull; HD</span>
+                </div>
+                <div class="card-hud-bottom">
+                  <span class="hud-tc">00:00:24:17</span>
+                  <span class="hud-action">&#9654; GUARDA</span>
+                </div>
+              </div>
+              <div class="video-card-info">
+                <div class="video-card-meta">
+                  <span class="video-index">07</span>
+                  <div>
+                    <h3 class="video-item-title">Visual Experiment No. 02</h3>
+                    <p class="video-item-sub">EXPERIMENTAL / VISUAL RHYTHM</p>
+                  </div>
+                </div>
+                <span class="video-item-role">Creative Direction / Edit</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- VIDEO DINAMICI 01 (Vertical 9:16) -->
+          <article class="video-item card-portrait" data-category="video-dinamici" data-title="Tennis Club — Match Day Promo" data-category-name="VIDEO DINAMICI PER ATTIVITÀ" data-src="video/video dinamici per attività/Tennis day 1.mov" data-duration="00:00:32:10" data-format="4K UHD &bull; 9:16 VERTICAL" data-role="Filmmaker / Dynamic Editor">
+            <div class="video-item-inner">
+              <div class="video-card-media">
+                <video src="video/video%20dinamici%20per%20attivit%C3%A0/Tennis%20day%201.mov#t=0.1" muted loop playsinline preload="metadata"></video>
+                <div class="video-card-overlay">
+                  <div class="play-trigger-circle">
+                    <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="card-hud-top">
+                  <span class="badge-cat badge-dynamic">ATTIVITÀ</span>
+                  <span class="badge-aspect">9:16 &bull; 4K</span>
+                </div>
+                <div class="card-hud-bottom">
+                  <span class="hud-tc">00:00:32:10</span>
+                  <span class="hud-action">&#9654; GUARDA</span>
+                </div>
+              </div>
+              <div class="video-card-info">
+                <div class="video-card-meta">
+                  <span class="video-index">08</span>
+                  <div>
+                    <h3 class="video-item-title">Tennis Club — Match Day Promo</h3>
+                    <p class="video-item-sub">COMMERCIAL / SPORTS PROMO</p>
+                  </div>
+                </div>
+                <span class="video-item-role">Filmmaker / Dynamic Editor</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- VIDEO DINAMICI 02 (Vertical 9:16) -->
+          <article class="video-item card-portrait" data-category="video-dinamici" data-title="Barber Studio — Craft &amp; Lifestyle" data-category-name="VIDEO DINAMICI PER ATTIVITÀ" data-src="video/video dinamici per attività/barbiere--1.mov" data-duration="00:00:26:01" data-format="4K UHD &bull; 9:16 VERTICAL" data-role="Filmmaker / Color &amp; Sound">
+            <div class="video-item-inner">
+              <div class="video-card-media">
+                <video src="video/video%20dinamici%20per%20attivit%C3%A0/barbiere--1.mov#t=0.1" muted loop playsinline preload="metadata"></video>
+                <div class="video-card-overlay">
+                  <div class="play-trigger-circle">
+                    <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="card-hud-top">
+                  <span class="badge-cat badge-dynamic">ATTIVITÀ</span>
+                  <span class="badge-aspect">9:16 &bull; 4K</span>
+                </div>
+                <div class="card-hud-bottom">
+                  <span class="hud-tc">00:00:26:01</span>
+                  <span class="hud-action">&#9654; GUARDA</span>
+                </div>
+              </div>
+              <div class="video-card-info">
+                <div class="video-card-meta">
+                  <span class="video-index">09</span>
+                  <div>
+                    <h3 class="video-item-title">Barber Studio — Craft &amp; Lifestyle</h3>
+                    <p class="video-item-sub">COMMERCIAL / BRAND STORY</p>
+                  </div>
+                </div>
+                <span class="video-item-role">Filmmaker / Color &amp; Sound</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- TESTI 01 (Landscape 16:9) -->
+          <article class="video-item card-landscape" data-category="testi" data-title="3D Text" data-category-name="TESTI &amp; KINETIC TYPE" data-src="video/testi/text13d.gif" data-duration="00:00:05:00" data-format="1080p FHD &bull; 16:9 LANDSCAPE" data-role="3D Motion Designer / Typographer">
+            <div class="video-item-inner">
+              <div class="video-card-media">
+                <img src="video/testi/text13d.gif" alt="3D Text" loading="lazy">
+                <div class="video-card-overlay">
+                  <div class="play-trigger-circle">
+                    <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="card-hud-top">
+                  <span class="badge-cat badge-testi">TESTI</span>
+                  <span class="badge-aspect">16:9 &bull; 1080p</span>
+                </div>
+                <div class="card-hud-bottom">
+                  <span class="hud-tc">00:00:05:00</span>
+                  <span class="hud-action">&#9654; GUARDA</span>
+                </div>
+              </div>
+              <div class="video-card-info">
+                <div class="video-card-meta">
+                  <span class="video-index">10</span>
+                  <div>
+                    <h3 class="video-item-title">3D Text</h3>
+                    <p class="video-item-sub">MOTION GRAPHICS / 3D TEXT</p>
+                  </div>
+                </div>
+                <span class="video-item-role">3D Motion Designer / Typographer</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- TESTI 02 (Landscape 16:9) -->
+          <article class="video-item card-landscape" data-category="testi" data-title="3D Text" data-category-name="TESTI &amp; KINETIC TYPE" data-src="video/testi/text2.gif" data-duration="00:00:04:12" data-format="1080p FHD &bull; 16:9 LANDSCAPE" data-role="Motion Designer / Type Animator">
+            <div class="video-item-inner">
+              <div class="video-card-media">
+                <img src="video/testi/text2.gif" alt="3D Text" loading="lazy">
+                <div class="video-card-overlay">
+                  <div class="play-trigger-circle">
+                    <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="card-hud-top">
+                  <span class="badge-cat badge-testi">TESTI</span>
+                  <span class="badge-aspect">16:9 &bull; 1080p</span>
+                </div>
+                <div class="card-hud-bottom">
+                  <span class="hud-tc">00:00:04:12</span>
+                  <span class="hud-action">&#9654; GUARDA</span>
+                </div>
+              </div>
+              <div class="video-card-info">
+                <div class="video-card-meta">
+                  <span class="video-index">11</span>
+                  <div>
+                    <h3 class="video-item-title">3D Text</h3>
+                    <p class="video-item-sub">KINETIC TYPOGRAPHY / 3D TEXT</p>
+                  </div>
+                </div>
+                <span class="video-item-role">Motion Designer / Type Animator</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── COPPIA 1: ESPLOSIONE (PRIME DUE FOTO) ── -->
+          <!-- FOTOGRAFIA 01: ESPLOSIONE I (Vertical 9:16) -->
+          <article class="video-item card-portrait" data-category="fotografie" data-title="" data-category-name="FOTOGRAFIA" data-src="video/fotografie/esplosione.jpeg" data-duration="STILL &bull; FINE ART" data-format="1536x2752 &bull; HIGH-RES" data-role="Photographer / Digital Artist">
+            <div class="video-item-inner">
+              <div class="video-card-media">
+                <img src="video/fotografie/esplosione.jpeg" alt="Fotografia" loading="lazy">
+                <div class="video-card-overlay">
+                  <div class="play-trigger-circle">
+                    <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="card-hud-top">
+                  <span class="badge-cat badge-photo">FOTO</span>
+                  <span class="badge-aspect">9:16 &bull; 2.7K</span>
+                </div>
+                <div class="card-hud-bottom">
+                  <span class="hud-tc">STILL CAPTURE</span>
+                  <span class="hud-action">&#9654; GUARDA</span>
+                </div>
+              </div>
+              <div class="video-card-info">
+                <div class="video-card-meta">
+                  <span class="video-index">12</span>
+                  <div>
+                    <p class="video-item-sub">FINE ART / CONCEPTUAL</p>
+                  </div>
+                </div>
+                <span class="video-item-role">Photographer / Digital Artist</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- FOTOGRAFIA 02: ESPLOSIONE II (Vertical 9:16) -->
+          <article class="video-item card-portrait" data-category="fotografie" data-title="" data-category-name="FOTOGRAFIA" data-src="video/fotografie/Image_202512300028%202.jpeg" data-duration="STILL &bull; FINE ART" data-format="756x1344 &bull; HIGH-RES" data-role="Photographer / Digital Artist">
+            <div class="video-item-inner">
+              <div class="video-card-media">
+                <img src="video/fotografie/Image_202512300028%202.jpeg" alt="Fotografia" loading="lazy">
+                <div class="video-card-overlay">
+                  <div class="play-trigger-circle">
+                    <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="card-hud-top">
+                  <span class="badge-cat badge-photo">FOTO</span>
+                  <span class="badge-aspect">9:16 &bull; HD</span>
+                </div>
+                <div class="card-hud-bottom">
+                  <span class="hud-tc">STILL CAPTURE</span>
+                  <span class="hud-action">&#9654; GUARDA</span>
+                </div>
+              </div>
+              <div class="video-card-info">
+                <div class="video-card-meta">
+                  <span class="video-index">13</span>
+                  <div>
+                    <p class="video-item-sub">FINE ART / CONCEPTUAL</p>
+                  </div>
+                </div>
+                <span class="video-item-role">Photographer / Digital Artist</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── COPPIA 2: VOLPE ── -->
+          <!-- FOTOGRAFIA 03: VOLPE I (Vertical 9:16) -->
+          <article class="video-item card-portrait" data-category="fotografie" data-title="" data-category-name="FOTOGRAFIA" data-src="video/fotografie/volpe.png" data-duration="STILL &bull; RAW" data-format="1536x2752 &bull; 300 DPI" data-role="Wildlife Photographer">
+            <div class="video-item-inner">
+              <div class="video-card-media">
+                <img src="video/fotografie/volpe.png" alt="Fotografia" loading="lazy">
+                <div class="video-card-overlay">
+                  <div class="play-trigger-circle">
+                    <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="card-hud-top">
+                  <span class="badge-cat badge-photo">FOTO</span>
+                  <span class="badge-aspect">9:16 &bull; 2.7K</span>
+                </div>
+                <div class="card-hud-bottom">
+                  <span class="hud-tc">STILL CAPTURE</span>
+                  <span class="hud-action">&#9654; GUARDA</span>
+                </div>
+              </div>
+              <div class="video-card-info">
+                <div class="video-card-meta">
+                  <span class="video-index">14</span>
+                  <div>
+                    <p class="video-item-sub">WILDLIFE / RED FOX</p>
+                  </div>
+                </div>
+                <span class="video-item-role">Wildlife Photographer</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- FOTOGRAFIA 04: VOLPE II (Vertical 9:16) -->
+          <article class="video-item card-portrait" data-category="fotografie" data-title="" data-category-name="FOTOGRAFIA" data-src="video/fotografie/volpe2.jpeg" data-duration="STILL &bull; RAW" data-format="1536x2752 &bull; 300 DPI" data-role="Wildlife Photographer">
+            <div class="video-item-inner">
+              <div class="video-card-media">
+                <img src="video/fotografie/volpe2.jpeg" alt="Fotografia" loading="lazy">
+                <div class="video-card-overlay">
+                  <div class="play-trigger-circle">
+                    <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="card-hud-top">
+                  <span class="badge-cat badge-photo">FOTO</span>
+                  <span class="badge-aspect">9:16 &bull; 2.7K</span>
+                </div>
+                <div class="card-hud-bottom">
+                  <span class="hud-tc">STILL CAPTURE</span>
+                  <span class="hud-action">&#9654; GUARDA</span>
+                </div>
+              </div>
+              <div class="video-card-info">
+                <div class="video-card-meta">
+                  <span class="video-index">15</span>
+                  <div>
+                    <p class="video-item-sub">WILDLIFE / RED FOX</p>
+                  </div>
+                </div>
+                <span class="video-item-role">Wildlife Photographer</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── COPPIA 3: POIANA ── -->
+          <!-- FOTOGRAFIA 05: POIANA I (Landscape 16:9) -->
+          <article class="video-item card-landscape" data-category="fotografie" data-title="" data-category-name="FOTOGRAFIA" data-src="video/fotografie/poiana4.jpeg" data-duration="STILL &bull; RAW" data-format="2752x1536 &bull; 2.7K ULTRA-RES" data-role="Wildlife Photographer">
+            <div class="video-item-inner">
+              <div class="video-card-media">
+                <img src="video/fotografie/poiana4.jpeg" alt="Fotografia" loading="lazy">
+                <div class="video-card-overlay">
+                  <div class="play-trigger-circle">
+                    <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="card-hud-top">
+                  <span class="badge-cat badge-photo">FOTO</span>
+                  <span class="badge-aspect">16:9 &bull; 2.7K</span>
+                </div>
+                <div class="card-hud-bottom">
+                  <span class="hud-tc">STILL CAPTURE</span>
+                  <span class="hud-action">&#9654; GUARDA</span>
+                </div>
+              </div>
+              <div class="video-card-info">
+                <div class="video-card-meta">
+                  <span class="video-index">16</span>
+                  <div>
+                    <p class="video-item-sub">WILDLIFE / BIRD IN FLIGHT</p>
+                  </div>
+                </div>
+                <span class="video-item-role">Wildlife Photographer</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- FOTOGRAFIA 06: POIANA II (Landscape 16:9) -->
+          <article class="video-item card-landscape" data-category="fotografie" data-title="" data-category-name="FOTOGRAFIA" data-src="video/fotografie/poiana5.jpeg" data-duration="STILL &bull; RAW" data-format="2752x1536 &bull; 2.7K ULTRA-RES" data-role="Wildlife Photographer">
+            <div class="video-item-inner">
+              <div class="video-card-media">
+                <img src="video/fotografie/poiana5.jpeg" alt="Fotografia" loading="lazy">
+                <div class="video-card-overlay">
+                  <div class="play-trigger-circle">
+                    <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="card-hud-top">
+                  <span class="badge-cat badge-photo">FOTO</span>
+                  <span class="badge-aspect">16:9 &bull; 2.7K</span>
+                </div>
+                <div class="card-hud-bottom">
+                  <span class="hud-tc">STILL CAPTURE</span>
+                  <span class="hud-action">&#9654; GUARDA</span>
+                </div>
+              </div>
+              <div class="video-card-info">
+                <div class="video-card-meta">
+                  <span class="video-index">17</span>
+                  <div>
+                    <p class="video-item-sub">WILDLIFE / BIRD IN FLIGHT</p>
+                  </div>
+                </div>
+                <span class="video-item-role">Wildlife Photographer</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── COPPIA 4: LUMACA ── -->
+          <!-- FOTOGRAFIA 07: LUMACA I (Landscape 16:9) -->
+          <article class="video-item card-landscape" data-category="fotografie" data-title="" data-category-name="FOTOGRAFIA" data-src="video/fotografie/lumaca_2.jpg" data-duration="STILL &bull; RAW" data-format="5472x3648 &bull; CANON EOS R6" data-role="Macro Photographer">
+            <div class="video-item-inner">
+              <div class="video-card-media">
+                <img src="video/fotografie/lumaca_2.jpg" alt="Fotografia" loading="lazy">
+                <div class="video-card-overlay">
+                  <div class="play-trigger-circle">
+                    <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="card-hud-top">
+                  <span class="badge-cat badge-photo">FOTO</span>
+                  <span class="badge-aspect">3:2 &bull; 5.4K RAW</span>
+                </div>
+                <div class="card-hud-bottom">
+                  <span class="hud-tc">STILL CAPTURE</span>
+                  <span class="hud-action">&#9654; GUARDA</span>
+                </div>
+              </div>
+              <div class="video-card-info">
+                <div class="video-card-meta">
+                  <span class="video-index">18</span>
+                  <div>
+                    <p class="video-item-sub">MACRO / NATURE &amp; FAUNA</p>
+                  </div>
+                </div>
+                <span class="video-item-role">Macro Photographer</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- FOTOGRAFIA 08: LUMACA II (Landscape 16:9) -->
+          <article class="video-item card-landscape" data-category="fotografie" data-title="" data-category-name="FOTOGRAFIA" data-src="video/fotografie/lumaca_4.jpg" data-duration="STILL &bull; RAW" data-format="5472x3648 &bull; CANON EOS R6" data-role="Macro Photographer">
+            <div class="video-item-inner">
+              <div class="video-card-media">
+                <img src="video/fotografie/lumaca_4.jpg" alt="Fotografia" loading="lazy">
+                <div class="video-card-overlay">
+                  <div class="play-trigger-circle">
+                    <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="card-hud-top">
+                  <span class="badge-cat badge-photo">FOTO</span>
+                  <span class="badge-aspect">3:2 &bull; 5.4K RAW</span>
+                </div>
+                <div class="card-hud-bottom">
+                  <span class="hud-tc">STILL CAPTURE</span>
+                  <span class="hud-action">&#9654; GUARDA</span>
+                </div>
+              </div>
+              <div class="video-card-info">
+                <div class="video-card-meta">
+                  <span class="video-index">19</span>
+                  <div>
+                    <p class="video-item-sub">MACRO / NATURE &amp; FAUNA</p>
+                  </div>
+                </div>
+                <span class="video-item-role">Macro Photographer</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. NODE GRAPH / PROCESS SECTION -->
+    <section id="process" class="node-section">
+      <div class="container">
+        <header class="node-header">
+          <p class="text-label">THE PROCESS</p>
+          <h2 class="text-display text-section">From Raw Footage<br>to Final Cut</h2>
+        </header>
+
+        <div class="node-graph">
+          <!-- SVG Connections Overlay -->
+          <svg class="node-connections" viewBox="0 0 500 560" preserveAspectRatio="none">
+            <!-- Background Dashed Paths -->
+            <path class="connection-bg" d="M 250,50 C 250,85 235,85 235,120"></path>
+            <path class="connection-bg" d="M 235,170 C 235,205 265,205 265,240"></path>
+            <path class="connection-bg" d="M 265,290 C 265,325 295,325 295,360"></path>
+            <path class="connection-bg" d="M 295,410 C 295,445 250,445 250,480"></path>
+
+            <!-- Active Animated Paths -->
+            <path class="connection-active" d="M 250,50 C 250,85 235,85 235,120"></path>
+            <path class="connection-active" d="M 235,170 C 235,205 265,205 265,240"></path>
+            <path class="connection-active" d="M 265,290 C 265,325 295,325 295,360"></path>
+            <path class="connection-active" d="M 295,410 C 295,445 250,445 250,480"></path>
+          </svg>
+
+          <!-- Nodes -->
+          <div class="node" style="top: 0; left: 50%;">
+            <span class="node-dot"></span>
+            <span class="node-label">RAW FOOTAGE</span>
+          </div>
+
+          <div class="node" style="top: 120px; left: 47%;">
+            <span class="node-dot"></span>
+            <span class="node-label">EDIT</span>
+          </div>
+
+          <div class="node" style="top: 240px; left: 53%;">
+            <span class="node-dot"></span>
+            <span class="node-label">COLOR</span>
+          </div>
+
+          <div class="node" style="top: 360px; left: 59%;">
+            <span class="node-dot"></span>
+            <span class="node-label">VFX</span>
+          </div>
+
+          <div class="node final" style="top: 480px; left: 50%;">
+            <span class="node-dot"></span>
+            <span class="node-label">FINAL VIDEO</span>
+          </div>
+        </div>
+
+        <p class="node-description">
+          A precise, iterative workflow where technical expertise meets artistic vision. Every node in the graph represents a crucial layer of visual storytelling.
+        </p>
+      </div>
+    </section>
+
+    <!-- 5. ABOUT SECTION -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="about-grid">
+          <!-- Text column -->
+          <div>
+            <p class="text-label about-reveal">ABOUT</p>
+            <h2 class="text-display about-name about-reveal">Andrea Graffeo</h2>
+            <p class="about-role about-reveal">Video Editor & Filmmaker</p>
+
+            <div class="about-bio">
+              <p>I am a visual storyteller obsessed with the rhythm of the cut. For me, editing isn&apos;t just about assembling footage&mdash;it&apos;s about finding the hidden tempo within the frames and shaping emotions through timing, color, and sound.</p>
+              <p>With a foundation in both the technical and artistic sides of post-production, I bridge the gap between creative vision and cinematic reality. Whether it&apos;s meticulous color grading to establish a mood, seamless VFX integration, or dynamic motion graphics, I treat every project as a unique canvas.</p>
+              <p>My approach is heavily inspired by analog techniques, bringing a raw, authentic texture to modern digital workflows. I strive to make the digital feel tangible.</p>
+            </div>
+
+            <div class="about-skills">
+              <strong>5+ YEARS</strong>
+              <span class="skill-divider"></span>
+              <span>EDITING</span>
+              <span class="skill-divider"></span>
+              <span>COLOR</span>
+              <span class="skill-divider"></span>
+              <span>VFX</span>
+              <span class="skill-divider"></span>
+              <span>MOTION</span>
+            </div>
+          </div>
+
+          <!-- Visual frame column -->
+          <div class="about-image">
+            <div class="about-image-line"></div>
+            <div class="corner-mark corner-tl"></div>
+            <div class="corner-mark corner-tr"></div>
+            <div class="corner-mark corner-bl"></div>
+            <div class="corner-mark corner-br"></div>
+            <div class="about-tc about-tc-top">00:00:12:05</div>
+            <div class="about-tc about-tc-bottom">FRAME 0247</div>
+
+            <div class="about-image-placeholder">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+              </svg>
+              <span>Portrait</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. SHOWREEL SECTION -->
+    <section id="showreel" class="showreel-section">
+      <div class="showreel-header">
+        <h2 class="text-label">SHOWREEL</h2>
+        <span class="showreel-year">2026</span>
+      </div>
+
+      <div class="showreel-wrapper">
+        <div class="showreel-progress">
+          <div class="showreel-playhead"></div>
+        </div>
+
+        <div class="showreel-video-container">
+          <video src="video/vfx/video%203.mov" controls playsinline preload="metadata"></video>
+        </div>
+
+        <div class="showreel-meta">
+          <span>DURATION &mdash; 00:00:30</span>
+          <span>RESOLUTION &mdash; 4K UHD</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+      <div class="container contact-inner">
+        <h2 class="contact-heading">
+          LET&apos;S CREATE<br>SOMETHING<span class="contact-dot">.</span>
+        </h2>
+
+        <a href="mailto:lemareda567@gmail.com" class="contact-cta">GET IN TOUCH</a>
+
+        <p class="contact-email">lemareda567@gmail.com</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- 8. FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>&copy; 2026 ANDREA GRAFFEO</div>
+      <div class="footer-tc">01:23:45:00</div>
+    </div>
+  </footer>
+
+  <!-- CINEMATIC VIDEO PLAYER MODAL -->
+  <div id="videoModal" class="video-modal" aria-hidden="true" role="dialog" aria-label="Riproduttore Video">
+    <div class="video-modal-backdrop"></div>
+    <div class="video-modal-container">
+      <div class="video-modal-header">
+        <div class="video-modal-info">
+          <span class="video-modal-badge" id="modalBadge">VFX</span>
+          <h3 class="video-modal-title" id="modalTitle">Titolo Video</h3>
+          <span class="video-modal-specs" id="modalSpecs">4K UHD &bull; 24 FPS</span>
+        </div>
+        <div class="video-modal-controls-top">
+          <div class="video-modal-tc" id="modalTimecode">00:00:00:00</div>
+          <button class="video-modal-close" id="modalCloseBtn" aria-label="Chiudi video (Esc)">&times;</button>
+        </div>
+      </div>
+      <div class="video-modal-body">
+        <button class="video-modal-nav modal-nav-prev" id="modalPrevBtn" aria-label="Video precedente (Freccia Sinistra)" title="Video precedente">
+          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <div class="video-modal-player-wrap" id="modalPlayerWrap">
+          <video id="modalVideoElement" controls playsinline preload="auto"></video>
+          <img id="modalImgElement" alt="Video Preview" style="display: none;">
+        </div>
+        <button class="video-modal-nav modal-nav-next" id="modalNextBtn" aria-label="Video successivo (Freccia Destra)" title="Video successivo">
+          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+      <div class="video-modal-footer">
+        <div class="modal-footer-role" id="modalRole">Role: Director / Editor</div>
+        <div class="modal-footer-hint">Usa le frecce &larr; / &rarr; per scorrere i video &bull; ESC per chiudere</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts: Lenis + GSAP + ScrollTrigger + Main -->
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

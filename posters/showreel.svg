@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%" fx="40%" fy="30%">
+      <stop offset="0%" stop-color="#181326"/>
+      <stop offset="60%" stop-color="#09080e"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </radialGradient>
+    <linearGradient id="violetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  
+  <!-- Cinematic Letterbox Grid -->
+  <line x1="0" y1="140" x2="1920" y2="140" stroke="#8B5CF6" stroke-opacity="0.15" stroke-dasharray="8 8"/>
+  <line x1="0" y1="940" x2="1920" y2="940" stroke="#8B5CF6" stroke-opacity="0.15" stroke-dasharray="8 8"/>
+  <line x1="320" y1="0" x2="320" y2="1080" stroke="#ffffff" stroke-opacity="0.03"/>
+  <line x1="960" y1="0" x2="960" y2="1080" stroke="#ffffff" stroke-opacity="0.05"/>
+  <line x1="1600" y1="0" x2="1600" y2="1080" stroke="#ffffff" stroke-opacity="0.03"/>
+
+  <!-- Center Crosshairs -->
+  <circle cx="960" cy="540" r="120" fill="none" stroke="#8B5CF6" stroke-opacity="0.2" stroke-width="1.5"/>
+  <circle cx="960" cy="540" r="4" fill="#8B5CF6"/>
+  <line x1="940" y1="540" x2="980" y2="540" stroke="#8B5CF6" stroke-width="1"/>
+  <line x1="960" y1="520" x2="960" y2="560" stroke="#8B5CF6" stroke-width="1"/>
+
+  <!-- Corner Crop Marks -->
+  <path d="M 80,120 L 80,80 L 120,80" fill="none" stroke="#666666" stroke-width="2"/>
+  <path d="M 1840,120 L 1840,80 L 1800,80" fill="none" stroke="#666666" stroke-width="2"/>
+  <path d="M 80,960 L 80,1000 L 120,1000" fill="none" stroke="#666666" stroke-width="2"/>
+  <path d="M 1840,960 L 1840,1000 L 1800,1000" fill="none" stroke="#666666" stroke-width="2"/>
+
+  <!-- Typography -->
+  <text x="960" y="520" text-anchor="middle" font-family="'Space Grotesk', system-ui, sans-serif" font-weight="700" font-size="42" fill="#ffffff" letter-spacing="8">SHOWREEL 2026</text>
+  <text x="960" y="580" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="16" fill="#8B5CF6" letter-spacing="4">4K UHD &bull; 23.976 FPS &bull; PRORES 4444</text>
+  <text x="120" y="1020" font-family="'JetBrains Mono', monospace" font-size="14" fill="#666666" letter-spacing="2">00:00:00:00</text>
+  <text x="1800" y="1020" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="14" fill="#666666" letter-spacing="2">ANDREA GRAFFEO</text>
+</svg>
