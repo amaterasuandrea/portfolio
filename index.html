@@ -384,7 +384,7 @@
           <!-- Macro 3: VIDEO DINAMICI PER ATTIVITÀ -->
           <div class="macro-card" data-macro="video-dinamici">
             <div class="macro-card-bg">
-              <video src="video/video%20dinamici%20per%20attivit%C3%A0/Tennis%20day%201.mp4" muted loop playsinline preload="metadata"></video>
+              <video src="video/video%20dinamici%20per%20attivit%C3%A0/Tennis%20day%201.mov" muted loop playsinline preload="metadata"></video>
               <div class="macro-card-overlay"></div>
             </div>
             <div class="macro-card-content">
@@ -448,40 +448,51 @@
           </div>
         </div>
 
-        <!-- CATEGORY FILTER TABS -->
-        <div class="filter-wrapper" id="video-gallery">
-          <div class="filter-tabs">
-            <button class="filter-tab active" data-filter="all">
-              <span class="filter-name">TUTTI</span>
-              <span class="filter-num">19</span>
+        <!-- CATEGORY FILTER BAR (HUD STYLE) -->
+        <div class="gallery-filter-bar hud-panel">
+          <div class="filter-controls">
+            <button class="filter-btn active" data-filter="all">
+              <span class="filter-icon">▤</span>
+              <span class="filter-text">TUTTI</span>
+              <span class="filter-count">19</span>
             </button>
-            <button class="filter-tab" data-filter="vfx">
-              <span class="filter-name">VFX &amp; COMPOSITING</span>
-              <span class="filter-num">05</span>
+            <button class="filter-btn" data-filter="vfx">
+              <span class="filter-icon">◆</span>
+              <span class="filter-text">VFX &amp; COMPOSITING</span>
+              <span class="filter-count">05</span>
             </button>
-            <button class="filter-tab" data-filter="idee-originali">
-              <span class="filter-name">IDEE ORIGINALI</span>
-              <span class="filter-num">02</span>
+            <button class="filter-btn" data-filter="idee-originali">
+              <span class="filter-icon">◈</span>
+              <span class="filter-text">IDEE ORIGINALI</span>
+              <span class="filter-count">02</span>
             </button>
-            <button class="filter-tab" data-filter="video-dinamici">
-              <span class="filter-name">VIDEO DINAMICI PER ATTIVITÀ</span>
-              <span class="filter-num">02</span>
+            <button class="filter-btn" data-filter="video-dinamici">
+              <span class="filter-icon">▲</span>
+              <span class="filter-text">VIDEO ATTIVITÀ</span>
+              <span class="filter-count">02</span>
             </button>
-            <button class="filter-tab" data-filter="testi">
-              <span class="filter-name">TESTI &amp; KINETIC TYPE</span>
-              <span class="filter-num">02</span>
+            <button class="filter-btn" data-filter="testi">
+              <span class="filter-icon">■</span>
+              <span class="filter-text">TESTI &amp; KINETIC</span>
+              <span class="filter-count">02</span>
             </button>
-            <button class="filter-tab" data-filter="fotografie">
-              <span class="filter-name">FOTOGRAFIE</span>
-              <span class="filter-num">08</span>
+            <button class="filter-btn" data-filter="fotografie">
+              <span class="filter-icon">✦</span>
+              <span class="filter-text">FOTOGRAFIA</span>
+              <span class="filter-count">08</span>
             </button>
+          </div>
+
+          <div class="filter-status">
+            <span class="status-indicator"></span>
+            <span class="status-text">LIVE ARCHIVE</span>
           </div>
         </div>
 
         <!-- VIDEO GALLERY GRID -->
         <div class="video-grid">
           <!-- VFX 01 (Landscape 16:9) -->
-          <article class="video-item card-landscape" data-category="vfx" data-title="Spider-Man — VFX &amp; CGI Integration" data-category-name="VFX &amp; COMPOSITING" data-src="video/vfx/spiderman.mp4" data-youtube="xSJHLhvMqQo" data-duration="00:00:09:14" data-format="4K UHD &bull; 60FPS" data-role="VFX Artist / Compositor">
+          <article class="video-item card-landscape" data-category="vfx" data-title="Spider-Man — VFX &amp; CGI Integration" data-category-name="VFX &amp; COMPOSITING" data-src="video/vfx/spiderman.mp4" data-duration="00:00:09:14" data-format="4K UHD &bull; 60FPS" data-role="VFX Artist / Compositor">
             <div class="video-item-inner">
               <div class="video-card-media">
                 <video src="video/vfx/spiderman.mp4#t=0.1" muted loop playsinline preload="metadata"></video>
@@ -513,7 +524,7 @@
           </article>
 
           <!-- VFX 02 (Landscape 16:9) -->
-          <article class="video-item card-landscape" data-category="vfx" data-title="VFX Composite &amp; 3D Environment" data-category-name="VFX &amp; COMPOSITING" data-src="video/vfx/video1.mp4" data-youtube="fEgGfSiYiJ4" data-duration="00:00:33:10" data-format="1440p QHD &bull; 60FPS" data-role="VFX Artist / Compositor">
+          <article class="video-item card-landscape" data-category="vfx" data-title="VFX Composite &amp; 3D Environment" data-category-name="VFX &amp; COMPOSITING" data-src="video/vfx/video1.mp4" data-duration="00:00:33:10" data-format="1440p QHD &bull; 60FPS" data-role="VFX Artist / Compositor">
             <div class="video-item-inner">
               <div class="video-card-media">
                 <video src="video/vfx/video1.mp4#t=0.1" muted loop playsinline preload="metadata"></video>
@@ -545,7 +556,7 @@
           </article>
 
           <!-- VFX 03 (Vertical 9:16) -->
-          <article class="video-item card-portrait" data-category="vfx" data-title="CGI Particle &amp; Light FX" data-category-name="VFX &amp; COMPOSITING" data-src="video/vfx/video2.mp4" data-youtube="nbXNmx_BtUE" data-duration="00:00:06:04" data-format="4K UHD &bull; 9:16 VERTICAL" data-role="3D Simulation / VFX">
+          <article class="video-item card-portrait" data-category="vfx" data-title="CGI Particle &amp; Light FX" data-category-name="VFX &amp; COMPOSITING" data-src="video/vfx/video2.mp4" data-duration="00:00:06:04" data-format="4K UHD &bull; 9:16 VERTICAL" data-role="3D Simulation / VFX">
             <div class="video-item-inner">
               <div class="video-card-media">
                 <video src="video/vfx/video2.mp4#t=0.1" muted loop playsinline preload="metadata"></video>
@@ -577,7 +588,7 @@
           </article>
 
           <!-- VFX 04 (Landscape 16:9) -->
-          <article class="video-item card-landscape" data-category="vfx" data-title="Cinematic Sci-Fi Environment" data-category-name="VFX &amp; COMPOSITING" data-src="video/vfx/video 3.mov" data-youtube="NwF3D2JlaCQ" data-duration="00:00:30:03" data-format="4K UHD &bull; 24FPS" data-role="Colorist / VFX Editor">
+          <article class="video-item card-landscape" data-category="vfx" data-title="Cinematic Sci-Fi Environment" data-category-name="VFX &amp; COMPOSITING" data-src="video/vfx/video 3.mov" data-duration="00:00:30:03" data-format="4K UHD &bull; 24FPS" data-role="Colorist / VFX Editor">
             <div class="video-item-inner">
               <div class="video-card-media">
                 <video src="video/vfx/video%203.mp4#t=0.1" muted loop playsinline preload="metadata"></video>
@@ -609,7 +620,7 @@
           </article>
 
           <!-- VFX 05 (Vertical 9:16) -->
-          <article class="video-item card-portrait" data-category="vfx" data-title="Holographic &amp; Motion Tracking" data-category-name="VFX &amp; COMPOSITING" data-src="video/vfx/video 4.mov" data-youtube="CPKvG61uKHs" data-duration="00:00:10:09" data-format="4K UHD &bull; 9:16 VERTICAL" data-role="Motion Tracking / VFX">
+          <article class="video-item card-portrait" data-category="vfx" data-title="Holographic &amp; Motion Tracking" data-category-name="VFX &amp; COMPOSITING" data-src="video/vfx/video 4.mov" data-duration="00:00:10:09" data-format="4K UHD &bull; 9:16 VERTICAL" data-role="Motion Tracking / VFX">
             <div class="video-item-inner">
               <div class="video-card-media">
                 <video src="video/vfx/video%204.mp4#t=0.1" muted loop playsinline preload="metadata"></video>
