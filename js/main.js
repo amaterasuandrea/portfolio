@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── 6. Macro Categories, Filter Tabs & Video Gallery Modal ──
   const macroCards = document.querySelectorAll('.macro-card');
-  const filterTabs = document.querySelectorAll('.filter-tab');
+  const filterTabs = document.querySelectorAll('.filter-btn');
   const videoItems = Array.from(document.querySelectorAll('.video-item'));
 
   // Modal elements
@@ -300,7 +300,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Scroll to video gallery if triggered by macro card click
     if (shouldScroll) {
-      const target = document.getElementById('video-gallery');
+      const target = document.querySelector('.video-grid');
       if (target) {
         if (lenis) {
           lenis.scrollTo(target, { offset: -90 });
@@ -348,34 +348,58 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 6B. Video Cards Hover & Touch Auto-preview
+  // 6B. Video Cards — Lazy Loading + Hover & Touch Auto-preview
   const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+  // Lazy load helper: assigns data-src to src when needed
+  function lazyLoadVideo(video) {
+    if (video && video.dataset.src && !video.getAttribute('src')) {
+      video.src = video.dataset.src;
+      video.preload = 'metadata';
+    }
+  }
+
+  // IntersectionObserver for lazy loading gallery videos
+  const videoLazyObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const video = entry.target.querySelector('.video-card-media video');
+        if (!video) return;
+
+        if (entry.isIntersecting) {
+          // Lazy load the video src when it enters viewport
+          lazyLoadVideo(video);
+
+          // On touch devices, auto-play visible videos
+          if (isTouch) {
+            video.play().catch(() => {});
+          }
+        } else {
+          // Pause when leaving viewport to save resources
+          if (video.getAttribute('src')) {
+            video.pause();
+          }
+        }
+      });
+    },
+    { rootMargin: '200px 0px', threshold: isTouch ? 0.6 : 0.1 }
+  );
 
   videoItems.forEach((item) => {
     const video = item.querySelector('.video-card-media video');
 
+    // Observe for lazy loading
+    videoLazyObserver.observe(item);
+
     if (video) {
       if (!isTouch) {
         item.addEventListener('mouseenter', () => {
+          lazyLoadVideo(video);
           video.play().catch(() => {});
         });
         item.addEventListener('mouseleave', () => {
           video.pause();
         });
-      } else {
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                video.play().catch(() => {});
-              } else {
-                video.pause();
-              }
-            });
-          },
-          { threshold: 0.6 }
-        );
-        observer.observe(item);
       }
     }
 
