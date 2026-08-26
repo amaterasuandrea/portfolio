@@ -450,44 +450,67 @@ document.addEventListener('DOMContentLoaded', () => {
     const isImage = /\.(jpe?g|png|gif|webp|svg)$/i.test(src);
     const isGif = src.toLowerCase().endsWith('.gif');
 
-    if (isImage) {
+    const youtubeId = item.dataset.youtube || '';
+    const modalIframe = document.getElementById('modalIframeElement');
+
+    if (youtubeId) {
       if (modalVideo) {
         modalVideo.pause();
         modalVideo.style.display = 'none';
         modalVideo.src = '';
       }
       if (modalImg) {
-        modalImg.src = src;
-        modalImg.style.display = 'block';
-      }
-
-      if (isGif) {
-        // Live simulated timecode for GIF animations (24fps loop)
-        let frameCounter = 0;
-        gifTimecodeTimer = setInterval(() => {
-          frameCounter++;
-          const hours = Math.floor(frameCounter / (3600 * 24));
-          const minutes = Math.floor((frameCounter % (3600 * 24)) / (60 * 24));
-          const seconds = Math.floor((frameCounter % (60 * 24)) / 24);
-          const frames = frameCounter % 24;
-          if (modalTimecode) {
-            modalTimecode.textContent = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}:${String(frames).padStart(2, '0')}`;
-          }
-        }, 1000 / 24);
-      } else {
-        if (modalTimecode) modalTimecode.textContent = 'STILL CAPTURE';
-      }
-    } else {
-      if (modalImg) {
         modalImg.style.display = 'none';
         modalImg.src = '';
       }
-      if (modalVideo) {
-        modalVideo.style.display = 'block';
-        modalVideo.pause();
-        modalVideo.src = src;
-        modalVideo.load();
-        modalVideo.play().catch(() => {});
+      if (modalIframe) {
+        modalIframe.src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0&modestbranding=1`;
+        modalIframe.style.display = 'block';
+      }
+    } else {
+      if (modalIframe) {
+        modalIframe.src = '';
+        modalIframe.style.display = 'none';
+      }
+      if (isImage) {
+        if (modalVideo) {
+          modalVideo.pause();
+          modalVideo.style.display = 'none';
+          modalVideo.src = '';
+        }
+        if (modalImg) {
+          modalImg.src = src;
+          modalImg.style.display = 'block';
+        }
+
+        if (isGif) {
+          // Live simulated timecode for GIF animations (24fps loop)
+          let frameCounter = 0;
+          gifTimecodeTimer = setInterval(() => {
+            frameCounter++;
+            const hours = Math.floor(frameCounter / (3600 * 24));
+            const minutes = Math.floor((frameCounter % (3600 * 24)) / (60 * 24));
+            const seconds = Math.floor((frameCounter % (60 * 24)) / 24);
+            const frames = frameCounter % 24;
+            if (modalTimecode) {
+              modalTimecode.textContent = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}:${String(frames).padStart(2, '0')}`;
+            }
+          }, 1000 / 24);
+        } else {
+          if (modalTimecode) modalTimecode.textContent = 'STILL CAPTURE';
+        }
+      } else {
+        if (modalImg) {
+          modalImg.style.display = 'none';
+          modalImg.src = '';
+        }
+        if (modalVideo) {
+          modalVideo.style.display = 'block';
+          modalVideo.pause();
+          modalVideo.src = src;
+          modalVideo.load();
+          modalVideo.play().catch(() => {});
+        }
       }
     }
   }
@@ -508,6 +531,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (gifTimecodeTimer) {
       clearInterval(gifTimecodeTimer);
       gifTimecodeTimer = null;
+    }
+    const modalIframe = document.getElementById('modalIframeElement');
+    if (modalIframe) {
+      modalIframe.src = '';
+      modalIframe.style.display = 'none';
     }
     if (modalVideo) {
       modalVideo.pause();

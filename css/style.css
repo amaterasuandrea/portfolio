@@ -1568,13 +1568,21 @@ button {
 }
 
 #modalVideoElement,
-#modalImgElement {
+#modalImgElement,
+#modalIframeElement {
   max-width: 100%;
   max-height: calc(88vh - 140px);
   border-radius: 4px;
   outline: none;
   background: #000;
   object-fit: contain;
+}
+
+#modalIframeElement {
+  width: 100%;
+  height: calc(88vh - 140px);
+  aspect-ratio: 16 / 9;
+  border: none;
 }
 
 .video-modal-nav {
